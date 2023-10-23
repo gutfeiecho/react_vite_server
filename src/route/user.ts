@@ -1,6 +1,7 @@
+import { Express, Request, Response } from "express";
 const { findAllUsers, findUserById } = require("../service/user");
-module.exports = (app) => {
-  app.get("/users", async (req, res) => {
+module.exports = (app: Express) => {
+  app.get("/users", async (req: Request, res: Response) => {
     const result = await findAllUsers();
     res.send({
       msg: "success",
