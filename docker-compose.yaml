@@ -1,0 +1,13 @@
+version: '3'
+
+services: 
+  react_vite_server: 
+    # 指定容器名称 react_vite_server
+    container_name: 'react_vite_server'
+    # 指定构建镜像上下文路径，依据./Dockerfile构建镜像
+    build: .
+    # 指定容器运行的镜像，名称设置为 react_vite_server:1.0
+    image: 'react_vite_server:1.0'
+    # 映射端口的标签，格式为"宿主机端口:容器端口"
+    ports: 
+      -'8989:8989'
