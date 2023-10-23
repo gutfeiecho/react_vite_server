@@ -1,12 +1,22 @@
 {
     "compilerOptions": {
-        "outDir": "build",
+        // 指定编译产物存放的目录。
+        "outDir": "./build",
+        // 指定编译产物的JS版本。
         "target": "es5",
+        // 指定源目录的JavaScript文件是否原样拷贝到编译后的目录。
+        "allowJs": true,
+        // module指定编译产物的模块格式。
         "module": "commonjs",
         "sourceMap": true,
+        // esModuleInterop修复了一些CommonJS和ES6模块之间的兼容性问题。
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "skipLibCheck": true
-    }
+    },
+    // 指定哪些文件需要编译。
+    "include": ["./src/**/*"],
+    // exclude属性是一个数组，必须与include属性一起使用，用来从编译列表中去除指定的文件。
+    // "exclude": ["./eslintrc.js"]
 }

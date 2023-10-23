@@ -1,9 +1,9 @@
 // Import express.
-import { Express } from "express";
-const express = require("express");
-const cors = require("cors");
+import { Express } from 'express';
+const express = require('express');
+const cors = require('cors');
 const app: Express = express();
-const userRouter = require("./route/user");
+const userRouter = require('./route/user');
 app.use(cors());
 
 const PORT = 8989;
