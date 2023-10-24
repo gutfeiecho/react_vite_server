@@ -1,10 +1,10 @@
-const { Sequelize } = require("sequelize");
-const { LOCAL_DB_CONFIG } = require("../config/index");
+const { Sequelize } = require('sequelize');
+const { LOCAL_DB_CONFIG } = require('../config/index');
 
 // create a conection to database.
-const sequelize = new Sequelize("echo_blog", "root", "genuinegtf0921", {
-  host: "localhost",
-  dialect: "mysql",
+const sequelize = new Sequelize('echo_blog', 'root', 'genuinegtf0921', {
+  host: 'localhost',
+  dialect: 'mysql'
 });
 
 // create several database connection.
@@ -38,10 +38,10 @@ const sequelize = new Sequelize("echo_blog", "root", "genuinegtf0921", {
 (async () => {
   try {
     await sequelize.authenticate();
-    console.log("Connect has been established successfully.");
+    console.log('Connect has been established successfully.');
   } catch (err) {
-    console.error("Unable to connect to the datebase:", error);
+    console.error('Unable to connect to the datebase:', error);
   }
 })();
 
-module.exports = sequelize;
+export default sequelize;
