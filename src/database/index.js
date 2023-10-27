@@ -1,5 +1,4 @@
-const { Sequelize } = require('sequelize');
-const { LOCAL_DB_CONFIG } = require('../config/index');
+import { Sequelize } from 'sequelize';
 
 // create a conection to database.
 const sequelize = new Sequelize('echo_blog', 'root', 'genuinegtf0921', {

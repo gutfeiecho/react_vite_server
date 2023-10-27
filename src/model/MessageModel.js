@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database';
 
-const Message = sequelize.define('eh_user', {
+const Message = sequelize.define('eh_message', {
   sender_id: {
     type: DataTypes.INTEGER,
     allowNull: false

@@ -1,7 +1,6 @@
-import { type Express, type Request, type Response } from 'express';
-const { findAllUsers, findUserById } = require('../service/user');
-module.exports = (app: Express) => {
-  app.get('/users', async (req: Request, res: Response) => {
+import { findAllUsers, findUserById } from '../service/user.js';
+const userRouter = (app) => {
+  app.get('/users', async (req, res) => {
     const result = await findAllUsers();
     res.send({
       msg: 'success',
@@ -18,3 +17,5 @@ module.exports = (app: Express) => {
     });
   });
 };
+
+export default userRouter;

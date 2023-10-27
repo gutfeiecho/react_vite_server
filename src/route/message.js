@@ -1,7 +1,6 @@
-import { type Express, type Request, type Response } from 'express';
-module.exports = (app: Express) => {
+const messageRouter = (app) => {
   // Create a 'GET' request.
-  app.get('/msg', (req: Request, res: Response) => {
+  app.get('/msg', (req, res) => {
     setTimeout(() => {
       res.type('application/json');
       res.send({
@@ -19,3 +18,5 @@ module.exports = (app: Express) => {
     res.status(401).send("Don't have access.");
   });
 };
+
+export default messageRouter;
